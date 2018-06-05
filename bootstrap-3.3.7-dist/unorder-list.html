@@ -1,13 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		 <script src="js/bootstrap.min.js"></script>
+     <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
-		<div class="container">
+    <div class="container logo">
+      <div class="col-lg-3">
+           <img src="home/logo.png" class="img-responsive">     
+      </div>
+      <div class="col-md-3 pull-right">
+        <ul class="nav nav-pills">
+          <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fab fa-google"></i></a></li>
+          <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fab fa-yahoo"></i></a></li>
+        </ul>
+      </div>
+    </div>
+		<div class="container menu">
 			<nav class="navbar navbar-default">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -50,7 +66,7 @@
   </div><!-- /.container-fluid -->
 </nav>
 	</div>
-	<div class="container">
+	<div class="container slider">
 		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -114,16 +130,65 @@
   </a>
 </div>
 	</div>
-	<div class="container">
+	<div class="container products ">
 		<div class="col-lg-3">
 			<h2>Categories</h2>
-			<ul class="nav nav-pills nav-stacked">
-				<li><a href="#">Mens wear<span class="pull-right">(10)</span></a></li>
-				<li><a href="#">Womens wear</a></li>
-				<li><a href="#">Kids wear</a></li>
-				<li><a href="#">Accessories</a></li>
-				<li><a href="#">Special Products</a></li>
-			</ul> 
+			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Mens Wear
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+        <li><a href="#">Nike<span class="pull-right">(10)</span></a></li>
+        <li><a href="#">Addidas</a></li>
+        <li><a href="#">Puma</a></li>
+        <li><a href="#">Sketchers</a></li>
+        <li><a href="#">Reebok</a></li>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Womens wear
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
+        <li><a href="#">Nike<span class="pull-right">(10)</span></a></li>
+        <li><a href="#">Addidas</a></li>
+        <li><a href="#">Puma</a></li>
+        <li><a href="#">Sketchers</a></li>
+        <li><a href="#">Reebok</a></li>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapselapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Kids wear
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="panel-body">
+        <li><a href="#">Nike<span class="pull-right">(10)</span></a></li>
+        <li><a href="#">Addidas</a></li>
+        <li><a href="#">Puma</a></li>
+        <li><a href="#">Sketchers</a></li>
+        <li><a href="#">Reebok</a></li>
+      </div>
+    </div>
+  </div>
+</div> 
 			<h2>Brands</h2>
 			<ul class="nav nav-pills nav-stacked">
 				<li><a href="#">Nike<span class="pull-right">(10)</span></a></li>
@@ -137,6 +202,7 @@
 			</div>
 		</div>
 		<div class="col-lg-9">
+      <h2 class="text-center">Latest Products</h2>
 			<div class="col-lg-4 text-center">
 				<img src="home/product1.jpg" class="img-responsive">
 				<h2><del>2000</del>1000</h2>
@@ -165,15 +231,118 @@
 				<img src="home/product5.jpg" class="img-responsive">
 				<h2><del>2000</del>1000</h2>
 				<p>Lorem ipsum dolor sit amet</p>
-				<p><button class="btn btn-warning"><span class="glyphicon glyphicon-shopping-cart" area-hidden="true"></span>Add to cart</button></p>
+				<p><button data-toggle="modal" data-target="#myModal1" class="btn btn-warning"><span class="glyphicon glyphicon-shopping-cart" area-hidden="true"></span>Add to cart</button></p>
 			</div>
 			<div class="col-lg-4 text-center">
 				<img src="home/product6.jpg" class="img-responsive">
 				<h2><del>2000</del>1000</h2>
 				<p>Lorem ipsum dolor sit amet</p>
-				<p><button class="btn btn-warning"><span class="glyphicon glyphicon-shopping-cart" area-hidden="true"></span>Add to cart</button></p>
+				<p><button data-toggle="modal" data-target="#myModal" class="btn btn-warning"><span class="glyphicon glyphicon-shopping-cart" area-hidden="true"></span>Add to cart</button></p>
 			</div>
 		</div>
 	</div>
+
+    <div class="footer">
+      <div class="container">
+        <div class="col-lg-2">
+          <h2>Services</h2>
+          <ul class="nav nav-pills nav-stacked">
+            <li><a href="#">order policy</a></li>
+            <li><a href="#">return policy</a></li>
+            <li><a href="#">customer care</a></li>
+            <li><a href="#">24 x 7 support</a></li>
+            <li><a href="#">terms & condition</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2">
+          <h2>Services</h2>
+          <ul class="nav nav-pills nav-stacked">
+            <li><a href="#">order policy</a></li>
+            <li><a href="#">return policy</a></li>
+            <li><a href="#">customer care</a></li>
+            <li><a href="#">24 x 7 support</a></li>
+            <li><a href="#">terms & condition</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2">
+          <h2>Services</h2>
+          <ul class="nav nav-pills nav-stacked">
+            <li><a href="#">order policy</a></li>
+            <li><a href="#">return policy</a></li>
+            <li><a href="#">customer care</a></li>
+            <li><a href="#">24 x 7 support</a></li>
+            <li><a href="#">terms & condition</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2">
+          <h2>Services</h2>
+          <ul class="nav nav-pills nav-stacked">
+            <li><a href="#">order policy</a></li>
+            <li><a href="#">return policy</a></li>
+            <li><a href="#">customer care</a></li>
+            <li><a href="#">24 x 7 support</a></li>
+            <li><a href="#">terms & condition</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2">
+          <h2>Services</h2>
+          <ul class="nav nav-pills nav-stacked">
+            <li><a href="#">order policy</a></li>
+            <li><a href="#">return policy</a></li>
+            <li><a href="#">customer care</a></li>
+            <li><a href="#">24 x 7 support</a></li>
+            <li><a href="#">terms & condition</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2">
+          <h2>Services</h2>
+          <ul class="nav nav-pills nav-stacked">
+            <li><a href="#">order policy</a></li>
+            <li><a href="#">return policy</a></li>
+            <li><a href="#">customer care</a></li>
+            <li><a href="#">24 x 7 support</a></li>
+            <li><a href="#">terms & condition</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+
+
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
